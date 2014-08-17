@@ -7,13 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3266551A0AB94E1C878E3745 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5155F7F179764D11B5471A81 /* libPods.a */; };
+		E05B0DAB19A06C08004E5557 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DAA19A06C08004E5557 /* SystemConfiguration.framework */; };
+		E05B0DAD19A06C0F004E5557 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DAC19A06C0F004E5557 /* Security.framework */; };
+		E05B0DAF19A06C18004E5557 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DAE19A06C18004E5557 /* QuartzCore.framework */; };
+		E05B0DB119A06C1F004E5557 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DB019A06C1F004E5557 /* MobileCoreServices.framework */; };
+		E05B0DB319A06C31004E5557 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DB219A06C31004E5557 /* libz.dylib */; };
+		E05B0DB519A06C51004E5557 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DB419A06C51004E5557 /* MapKit.framework */; };
+		E05B0DB719A06C59004E5557 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DB619A06C59004E5557 /* CoreLocation.framework */; };
+		E05B0DB919A06C60004E5557 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DB819A06C60004E5557 /* CFNetwork.framework */; };
+		E05B0DBB19A06C66004E5557 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B0DBA19A06C66004E5557 /* AudioToolbox.framework */; };
+		E0823001199E9FAB00805420 /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FC7199E9FAB00805420 /* HomepageTVC.m */; };
+		E0823002199E9FAB00805420 /* LayerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FC8199E9FAB00805420 /* LayerAPIManager.m */; };
+		E0823003199E9FAB00805420 /* LocationManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FCA199E9FAB00805420 /* LocationManagerController.m */; };
+		E0823004199E9FAB00805420 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FCC199E9FAB00805420 /* MapVC.m */; };
+		E0823005199E9FAB00805420 /* OptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FCE199E9FAB00805420 /* OptionsView.m */; };
+		E0823006199E9FAB00805420 /* AddressBookTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FCF199E9FAB00805420 /* AddressBookTVC.m */; };
+		E0823007199E9FAB00805420 /* HomepageChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FD1199E9FAB00805420 /* HomepageChatCell.m */; };
+		E0823008199E9FAB00805420 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FD2199E9FAB00805420 /* MessageCell.m */; };
+		E0823009199E9FAB00805420 /* MessageCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FD3199E9FAB00805420 /* MessageCVC.m */; };
+		E082300A199E9FAB00805420 /* AddContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FD5199E9FAB00805420 /* AddContacts.m */; };
+		E082300B199E9FAB00805420 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FD8199E9FAB00805420 /* APLViewController.m */; };
+		E082300C199E9FAB00805420 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0822FDA199E9FAB00805420 /* Main_iPad.storyboard */; };
+		E082300D199E9FAB00805420 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0822FDC199E9FAB00805420 /* Main_iPhone.storyboard */; };
+		E082300E199E9FAB00805420 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FDF199E9FAB00805420 /* Contact.m */; };
+		E082300F199E9FAB00805420 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FE1199E9FAB00805420 /* ContactCell.m */; };
+		E0823010199E9FAB00805420 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0822FE3199E9FAB00805420 /* InfoPlist.strings */; };
+		E0823011199E9FAB00805420 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0822FE6199E9FAB00805420 /* Images.xcassets */; };
+		E0823012199E9FAB00805420 /* LATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FE8199E9FAB00805420 /* LATabBarController.m */; };
+		E0823013199E9FAB00805420 /* LayerClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FEB199E9FAB00805420 /* LayerClientController.m */; };
+		E0823015199E9FAB00805420 /* LocationsApp.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */; };
+		E0823016199E9FAB00805420 /* LogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FF0199E9FAB00805420 /* LogoutCell.m */; };
+		E0823017199E9FAB00805420 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FF2199E9FAB00805420 /* MapViewAnnotation.m */; };
+		E0823018199E9FAB00805420 /* ParseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FF6199E9FAB00805420 /* ParseController.m */; };
+		E0823019199E9FAB00805420 /* parseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FF8199E9FAB00805420 /* parseUser.m */; };
+		E082301A199E9FAB00805420 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FFA199E9FAB00805420 /* SearchCell.m */; };
+		E082301B199E9FAB00805420 /* SettingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FFC199E9FAB00805420 /* SettingsTVC.m */; };
+		E082301C199E9FAB00805420 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E0822FFE199E9FAB00805420 /* UIImage+ImageEffects.m */; };
+		E082301D199E9FAB00805420 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E0823000199E9FAB00805420 /* User.m */; };
+		E0823020199E9FCD00805420 /* FirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = E082301F199E9FCD00805420 /* FirstView.m */; };
+		E0823025199E9FF000805420 /* Signup.m in Sources */ = {isa = PBXBuildFile; fileRef = E0823021199E9FF000805420 /* Signup.m */; };
+		E0823026199E9FF000805420 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0823023199E9FF000805420 /* LoginView.m */; };
 		E08532A4199E9EC000EAB8DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532A3199E9EC000EAB8DE /* Foundation.framework */; };
 		E08532A6199E9EC000EAB8DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532A5199E9EC000EAB8DE /* CoreGraphics.framework */; };
 		E08532A8199E9EC000EAB8DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532A7199E9EC000EAB8DE /* UIKit.framework */; };
 		E08532AE199E9EC000EAB8DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08532AC199E9EC000EAB8DE /* InfoPlist.strings */; };
 		E08532B0199E9EC000EAB8DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E08532AF199E9EC000EAB8DE /* main.m */; };
 		E08532B4199E9EC000EAB8DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E08532B3199E9EC000EAB8DE /* AppDelegate.m */; };
-		E08532B6199E9EC000EAB8DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08532B5199E9EC000EAB8DE /* Images.xcassets */; };
 		E08532BD199E9EC000EAB8DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532BC199E9EC000EAB8DE /* XCTest.framework */; };
 		E08532BE199E9EC000EAB8DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532A3199E9EC000EAB8DE /* Foundation.framework */; };
 		E08532BF199E9EC000EAB8DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08532A7199E9EC000EAB8DE /* UIKit.framework */; };
@@ -32,6 +72,75 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A851182A35841B1B8F62A10 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		5155F7F179764D11B5471A81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E05B0DAA19A06C08004E5557 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E05B0DAC19A06C0F004E5557 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E05B0DAE19A06C18004E5557 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E05B0DB019A06C1F004E5557 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E05B0DB219A06C31004E5557 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E05B0DB419A06C51004E5557 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E05B0DB619A06C59004E5557 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E05B0DB819A06C60004E5557 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E05B0DBA19A06C66004E5557 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E0822FC7199E9FAB00805420 /* HomepageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageTVC.m; sourceTree = "<group>"; };
+		E0822FC8199E9FAB00805420 /* LayerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerAPIManager.m; sourceTree = "<group>"; };
+		E0822FC9199E9FAB00805420 /* LocationManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerController.h; sourceTree = "<group>"; };
+		E0822FCA199E9FAB00805420 /* LocationManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerController.m; sourceTree = "<group>"; };
+		E0822FCB199E9FAB00805420 /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
+		E0822FCC199E9FAB00805420 /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
+		E0822FCD199E9FAB00805420 /* OptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsView.h; sourceTree = "<group>"; };
+		E0822FCE199E9FAB00805420 /* OptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsView.m; sourceTree = "<group>"; };
+		E0822FCF199E9FAB00805420 /* AddressBookTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookTVC.m; sourceTree = "<group>"; };
+		E0822FD0199E9FAB00805420 /* HomepageChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageChatCell.h; sourceTree = "<group>"; };
+		E0822FD1199E9FAB00805420 /* HomepageChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageChatCell.m; sourceTree = "<group>"; };
+		E0822FD2199E9FAB00805420 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		E0822FD3199E9FAB00805420 /* MessageCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCVC.m; sourceTree = "<group>"; };
+		E0822FD4199E9FAB00805420 /* AddContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContacts.h; sourceTree = "<group>"; };
+		E0822FD5199E9FAB00805420 /* AddContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContacts.m; sourceTree = "<group>"; };
+		E0822FD6199E9FAB00805420 /* AddressBookTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookTVC.h; sourceTree = "<group>"; };
+		E0822FD7199E9FAB00805420 /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		E0822FD8199E9FAB00805420 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		E0822FDB199E9FAB00805420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		E0822FDD199E9FAB00805420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E0822FDE199E9FAB00805420 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		E0822FDF199E9FAB00805420 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		E0822FE0199E9FAB00805420 /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
+		E0822FE1199E9FAB00805420 /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
+		E0822FE4199E9FAB00805420 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E0822FE5199E9FAB00805420 /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
+		E0822FE6199E9FAB00805420 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E0822FE7199E9FAB00805420 /* LATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATabBarController.h; sourceTree = "<group>"; };
+		E0822FE8199E9FAB00805420 /* LATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LATabBarController.m; sourceTree = "<group>"; };
+		E0822FE9199E9FAB00805420 /* LayerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerAPIManager.h; sourceTree = "<group>"; };
+		E0822FEA199E9FAB00805420 /* LayerClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerClientController.h; sourceTree = "<group>"; };
+		E0822FEB199E9FAB00805420 /* LayerClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerClientController.m; sourceTree = "<group>"; };
+		E0822FED199E9FAB00805420 /* LocationsApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationsApp-Prefix.pch"; sourceTree = "<group>"; };
+		E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LocationsApp.entitlements; sourceTree = "<group>"; };
+		E0822FEF199E9FAB00805420 /* LogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutCell.h; sourceTree = "<group>"; };
+		E0822FF0199E9FAB00805420 /* LogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutCell.m; sourceTree = "<group>"; };
+		E0822FF1199E9FAB00805420 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
+		E0822FF2199E9FAB00805420 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
+		E0822FF3199E9FAB00805420 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		E0822FF4199E9FAB00805420 /* MessageCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCVC.h; sourceTree = "<group>"; };
+		E0822FF5199E9FAB00805420 /* ParseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseController.h; sourceTree = "<group>"; };
+		E0822FF6199E9FAB00805420 /* ParseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseController.m; sourceTree = "<group>"; };
+		E0822FF7199E9FAB00805420 /* parseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseUser.h; sourceTree = "<group>"; };
+		E0822FF8199E9FAB00805420 /* parseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parseUser.m; sourceTree = "<group>"; };
+		E0822FF9199E9FAB00805420 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		E0822FFA199E9FAB00805420 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		E0822FFB199E9FAB00805420 /* SettingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTVC.h; sourceTree = "<group>"; };
+		E0822FFC199E9FAB00805420 /* SettingsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTVC.m; sourceTree = "<group>"; };
+		E0822FFD199E9FAB00805420 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		E0822FFE199E9FAB00805420 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		E0822FFF199E9FAB00805420 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E0823000199E9FAB00805420 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E082301E199E9FCC00805420 /* FirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstView.h; sourceTree = "<group>"; };
+		E082301F199E9FCD00805420 /* FirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstView.m; sourceTree = "<group>"; };
+		E0823021199E9FF000805420 /* Signup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signup.m; sourceTree = "<group>"; };
+		E0823022199E9FF000805420 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		E0823023199E9FF000805420 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		E0823024199E9FF000805420 /* Signup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signup.h; sourceTree = "<group>"; };
 		E08532A0199E9EC000EAB8DE /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08532A3199E9EC000EAB8DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E08532A5199E9EC000EAB8DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,7 +151,6 @@
 		E08532B1199E9EC000EAB8DE /* MarcoPolo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarcoPolo-Prefix.pch"; sourceTree = "<group>"; };
 		E08532B2199E9EC000EAB8DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E08532B3199E9EC000EAB8DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E08532B5199E9EC000EAB8DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E08532BB199E9EC000EAB8DE /* MarcoPoloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcoPoloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08532BC199E9EC000EAB8DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E08532C4199E9EC000EAB8DE /* MarcoPoloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarcoPoloTests-Info.plist"; sourceTree = "<group>"; };
@@ -55,9 +163,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05B0DBB19A06C66004E5557 /* AudioToolbox.framework in Frameworks */,
+				E05B0DB919A06C60004E5557 /* CFNetwork.framework in Frameworks */,
+				E05B0DB719A06C59004E5557 /* CoreLocation.framework in Frameworks */,
+				E05B0DB519A06C51004E5557 /* MapKit.framework in Frameworks */,
+				E05B0DB319A06C31004E5557 /* libz.dylib in Frameworks */,
+				E05B0DB119A06C1F004E5557 /* MobileCoreServices.framework in Frameworks */,
+				E05B0DAF19A06C18004E5557 /* QuartzCore.framework in Frameworks */,
+				E05B0DAD19A06C0F004E5557 /* Security.framework in Frameworks */,
+				E05B0DAB19A06C08004E5557 /* SystemConfiguration.framework in Frameworks */,
 				E08532A6199E9EC000EAB8DE /* CoreGraphics.framework in Frameworks */,
 				E08532A8199E9EC000EAB8DE /* UIKit.framework in Frameworks */,
 				E08532A4199E9EC000EAB8DE /* Foundation.framework in Frameworks */,
+				3266551A0AB94E1C878E3745 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +192,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0822FD9199E9FAB00805420 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FDA199E9FAB00805420 /* Main_iPad.storyboard */,
+				E0822FDC199E9FAB00805420 /* Main_iPhone.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		E0822FE2199E9FAB00805420 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FE3199E9FAB00805420 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		E0853297199E9EC000EAB8DE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +216,7 @@
 				E08532C2199E9EC000EAB8DE /* MarcoPoloTests */,
 				E08532A2199E9EC000EAB8DE /* Frameworks */,
 				E08532A1199E9EC000EAB8DE /* Products */,
+				0A851182A35841B1B8F62A10 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +232,20 @@
 		E08532A2199E9EC000EAB8DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E05B0DBA19A06C66004E5557 /* AudioToolbox.framework */,
+				E05B0DB819A06C60004E5557 /* CFNetwork.framework */,
+				E05B0DB619A06C59004E5557 /* CoreLocation.framework */,
+				E05B0DB419A06C51004E5557 /* MapKit.framework */,
+				E05B0DB219A06C31004E5557 /* libz.dylib */,
+				E05B0DB019A06C1F004E5557 /* MobileCoreServices.framework */,
+				E05B0DAE19A06C18004E5557 /* QuartzCore.framework */,
+				E05B0DAC19A06C0F004E5557 /* Security.framework */,
+				E05B0DAA19A06C08004E5557 /* SystemConfiguration.framework */,
 				E08532A3199E9EC000EAB8DE /* Foundation.framework */,
 				E08532A5199E9EC000EAB8DE /* CoreGraphics.framework */,
 				E08532A7199E9EC000EAB8DE /* UIKit.framework */,
 				E08532BC199E9EC000EAB8DE /* XCTest.framework */,
+				5155F7F179764D11B5471A81 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,9 +253,65 @@
 		E08532A9199E9EC000EAB8DE /* MarcoPolo */ = {
 			isa = PBXGroup;
 			children = (
+				E0823021199E9FF000805420 /* Signup.m */,
+				E0823022199E9FF000805420 /* LoginView.h */,
+				E0823023199E9FF000805420 /* LoginView.m */,
+				E0823024199E9FF000805420 /* Signup.h */,
+				E082301E199E9FCC00805420 /* FirstView.h */,
+				E082301F199E9FCD00805420 /* FirstView.m */,
+				E0822FC7199E9FAB00805420 /* HomepageTVC.m */,
+				E0822FC8199E9FAB00805420 /* LayerAPIManager.m */,
+				E0822FC9199E9FAB00805420 /* LocationManagerController.h */,
+				E0822FCA199E9FAB00805420 /* LocationManagerController.m */,
+				E0822FCB199E9FAB00805420 /* MapVC.h */,
+				E0822FCC199E9FAB00805420 /* MapVC.m */,
+				E0822FCD199E9FAB00805420 /* OptionsView.h */,
+				E0822FCE199E9FAB00805420 /* OptionsView.m */,
+				E0822FCF199E9FAB00805420 /* AddressBookTVC.m */,
+				E0822FD0199E9FAB00805420 /* HomepageChatCell.h */,
+				E0822FD1199E9FAB00805420 /* HomepageChatCell.m */,
+				E0822FD2199E9FAB00805420 /* MessageCell.m */,
+				E0822FD3199E9FAB00805420 /* MessageCVC.m */,
+				E0822FD4199E9FAB00805420 /* AddContacts.h */,
+				E0822FD5199E9FAB00805420 /* AddContacts.m */,
+				E0822FD6199E9FAB00805420 /* AddressBookTVC.h */,
+				E0822FD7199E9FAB00805420 /* APLViewController.h */,
+				E0822FD8199E9FAB00805420 /* APLViewController.m */,
+				E0822FD9199E9FAB00805420 /* Base.lproj */,
+				E0822FDE199E9FAB00805420 /* Contact.h */,
+				E0822FDF199E9FAB00805420 /* Contact.m */,
+				E0822FE0199E9FAB00805420 /* ContactCell.h */,
+				E0822FE1199E9FAB00805420 /* ContactCell.m */,
+				E0822FE2199E9FAB00805420 /* en.lproj */,
+				E0822FE5199E9FAB00805420 /* HomepageTVC.h */,
+				E0822FE6199E9FAB00805420 /* Images.xcassets */,
+				E0822FE7199E9FAB00805420 /* LATabBarController.h */,
+				E0822FE8199E9FAB00805420 /* LATabBarController.m */,
+				E0822FE9199E9FAB00805420 /* LayerAPIManager.h */,
+				E0822FEA199E9FAB00805420 /* LayerClientController.h */,
+				E0822FEB199E9FAB00805420 /* LayerClientController.m */,
+				E0822FED199E9FAB00805420 /* LocationsApp-Prefix.pch */,
+				E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */,
+				E0822FEF199E9FAB00805420 /* LogoutCell.h */,
+				E0822FF0199E9FAB00805420 /* LogoutCell.m */,
+				E0822FF1199E9FAB00805420 /* MapViewAnnotation.h */,
+				E0822FF2199E9FAB00805420 /* MapViewAnnotation.m */,
+				E0822FF3199E9FAB00805420 /* MessageCell.h */,
+				E0822FF4199E9FAB00805420 /* MessageCVC.h */,
+				E0822FF5199E9FAB00805420 /* ParseController.h */,
+				E0822FF6199E9FAB00805420 /* ParseController.m */,
+				E0822FF7199E9FAB00805420 /* parseUser.h */,
+				E0822FF8199E9FAB00805420 /* parseUser.m */,
+				E0822FF9199E9FAB00805420 /* SearchCell.h */,
+				E0822FFA199E9FAB00805420 /* SearchCell.m */,
+				E0822FFB199E9FAB00805420 /* SettingsTVC.h */,
+				E0822FFC199E9FAB00805420 /* SettingsTVC.m */,
+				E0822FFD199E9FAB00805420 /* UIImage+ImageEffects.h */,
+				E0822FFE199E9FAB00805420 /* UIImage+ImageEffects.m */,
+				E0822FFF199E9FAB00805420 /* User.h */,
+				E0823000199E9FAB00805420 /* User.m */,
 				E08532B2199E9EC000EAB8DE /* AppDelegate.h */,
 				E08532B3199E9EC000EAB8DE /* AppDelegate.m */,
-				E08532B5199E9EC000EAB8DE /* Images.xcassets */,
 				E08532AA199E9EC000EAB8DE /* Supporting Files */,
 			);
 			path = MarcoPolo;
@@ -151,9 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E08532CC199E9EC000EAB8DE /* Build configuration list for PBXNativeTarget "MarcoPolo" */;
 			buildPhases = (
+				A540E37B64C74E609620AFED /* Check Pods Manifest.lock */,
 				E085329C199E9EC000EAB8DE /* Sources */,
 				E085329D199E9EC000EAB8DE /* Frameworks */,
+				E05B0DA9199F6AF4004E5557 /* Export Sketch Assets */,
 				E085329E199E9EC000EAB8DE /* Resources */,
+				C233800D5D474A9B98D25203 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +396,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = MeeraParat;
 				TargetAttributes = {
+					E085329F199E9EC000EAB8DE = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					E08532BA199E9EC000EAB8DE = {
 						TestTargetID = E085329F199E9EC000EAB8DE;
 					};
@@ -202,6 +414,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E0853297199E9EC000EAB8DE;
 			productRefGroup = E08532A1199E9EC000EAB8DE /* Products */;
@@ -219,8 +432,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0823015199E9FAB00805420 /* LocationsApp.entitlements in Resources */,
+				E082300D199E9FAB00805420 /* Main_iPhone.storyboard in Resources */,
+				E082300C199E9FAB00805420 /* Main_iPad.storyboard in Resources */,
 				E08532AE199E9EC000EAB8DE /* InfoPlist.strings in Resources */,
-				E08532B6199E9EC000EAB8DE /* Images.xcassets in Resources */,
+				E0823011199E9FAB00805420 /* Images.xcassets in Resources */,
+				E0823010199E9FAB00805420 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,13 +451,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A540E37B64C74E609620AFED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C233800D5D474A9B98D25203 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05B0DA9199F6AF4004E5557 /* Export Sketch Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Export Sketch Assets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#AppIcon\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AppIcon.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AppIcon.appiconset --formats=\"png\"\n#LaunchImage\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/LaunchImage.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/LaunchImage.launchimage --formats=\"png\"\n\n##Login/Signup Screens\n#Background0\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/Background0.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/Background0.imageset --formats=\"png\"\n#Background1\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/Background1.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/Background1.imageset --formats=\"png\"\n#Background2\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/Background2.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/Background2.imageset --formats=\"png\"\n#LoginButton\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/LoginButton.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/LoginButton.imageset --formats=\"png\"\n#SignupButton\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/SignupButton.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/SignupButton.imageset --formats=\"png\"\n#DoneButton\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/DoneButton.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/DoneButton.imageset --formats=\"png\"\n#CancelLoginSignup\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/CancelLoginSignup.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/CancelLoginSignup.imageset --formats=\"png\"\n\n\n##Tab Bar items\n#UnselectedMessages\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UnselectedMessages.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UnselectedMessages.imageset --formats=\"png\"\n#SelectedMessages\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/SelectedMessages.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/SelectedMessages.imageset --formats=\"png\"\n#UnselectedContacts\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UnselectedContacts.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UnselectedContacts.imageset --formats=\"png\"\n#SelectedContacts\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/SelectedContacts.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/SelectedContacts.imageset --formats=\"png\"\n\n##HomepageTVC\n#AddConversation\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AddConversation.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AddConversation.imageset --formats=\"png\"\n#New\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/New.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/New.imageset --formats=\"png\"\n#ReadCircle\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/ReadCircle.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/ReadCircle.imageset --formats=\"png\"\n#UnreadCircle\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UnreadCircle.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UnreadCircle.imageset --formats=\"png\"\n#AskCell\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AskCell.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AskCell.imageset --formats=\"png\"\n#TellCell\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/TellCell.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/TellCell.imageset --formats=\"png\"\n#DownArrow\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/DownArrow.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/DownArrow.imageset --formats=\"png\"\n#UpArrow\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UpArrow.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UpArrow.imageset --formats=\"png\"\n\n##AddressBookTVC\n#AddContacts\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AddContacts.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AddContacts.imageset --formats=\"png\"\n#AddNew\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AddNew.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AddNew.imageset --formats=\"png\"\n#Settings\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/Settings.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/Settings.imageset --formats=\"png\"\n#UnselectedCircle\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UnselectedCircle.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UnselectedCircle.imageset --formats=\"png\"\n#SelectedCircle\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/SelectedCircle.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/SelectedCircle.imageset --formats=\"png\"\n\n##AddContactsTVC\n#UnselectedNewContact\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/UnselectedNewContact.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/UnselectedNewContact.imageset --formats=\"png\"\n\n##OptionsTVC\n#AskUnselected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AskUnselected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AskUnselected.imageset --formats=\"png\"\n#AskSelected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/AskSelected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/AskSelected.imageset --formats=\"png\"\n#TellUnselected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/TellUnselected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/TellUnselected.imageset --formats=\"png\"\n#TellSelected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/TellSelected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/TellSelected.imageset --formats=\"png\"\n#TextUnselected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/TextUnselected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/TextUnselected.imageset --formats=\"png\"\n#TextSelected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/TextSelected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/TextSelected.imageset --formats=\"png\"\n#DirectionsUnselected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/DirectionsUnselected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/DirectionsUnselected.imageset --formats=\"png\"\n#DirectionsSelected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/DirectionsSelected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/DirectionsSelected.imageset --formats=\"png\"\n#MapUnselected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/MapUnselected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/MapUnselected.imageset --formats=\"png\"\n#MapSelected\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/MapSelected.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/MapSelected.imageset --formats=\"png\"\n#Close\nsketchtool export artboards \"$PROJECT_DIR\"/\"Graphics Resources/Close.sketch\" --output=\"$PROJECT_DIR\"/\"$PROJECT_NAME\"/Images.xcassets/Close.imageset --formats=\"png\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E085329C199E9EC000EAB8DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E082301D199E9FAB00805420 /* User.m in Sources */,
+				E0823017199E9FAB00805420 /* MapViewAnnotation.m in Sources */,
+				E0823026199E9FF000805420 /* LoginView.m in Sources */,
+				E082300F199E9FAB00805420 /* ContactCell.m in Sources */,
+				E0823009199E9FAB00805420 /* MessageCVC.m in Sources */,
 				E08532B4199E9EC000EAB8DE /* AppDelegate.m in Sources */,
+				E0823006199E9FAB00805420 /* AddressBookTVC.m in Sources */,
+				E0823001199E9FAB00805420 /* HomepageTVC.m in Sources */,
+				E082300E199E9FAB00805420 /* Contact.m in Sources */,
+				E0823007199E9FAB00805420 /* HomepageChatCell.m in Sources */,
+				E082301C199E9FAB00805420 /* UIImage+ImageEffects.m in Sources */,
+				E0823025199E9FF000805420 /* Signup.m in Sources */,
+				E082300B199E9FAB00805420 /* APLViewController.m in Sources */,
+				E0823002199E9FAB00805420 /* LayerAPIManager.m in Sources */,
+				E0823008199E9FAB00805420 /* MessageCell.m in Sources */,
+				E082301A199E9FAB00805420 /* SearchCell.m in Sources */,
+				E082301B199E9FAB00805420 /* SettingsTVC.m in Sources */,
+				E0823019199E9FAB00805420 /* parseUser.m in Sources */,
+				E0823004199E9FAB00805420 /* MapVC.m in Sources */,
+				E082300A199E9FAB00805420 /* AddContacts.m in Sources */,
+				E0823012199E9FAB00805420 /* LATabBarController.m in Sources */,
+				E0823016199E9FAB00805420 /* LogoutCell.m in Sources */,
+				E0823018199E9FAB00805420 /* ParseController.m in Sources */,
+				E0823020199E9FCD00805420 /* FirstView.m in Sources */,
+				E0823005199E9FAB00805420 /* OptionsView.m in Sources */,
 				E08532B0199E9EC000EAB8DE /* main.m in Sources */,
+				E0823003199E9FAB00805420 /* LocationManagerController.m in Sources */,
+				E0823013199E9FAB00805420 /* LayerClientController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +553,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E0822FDA199E9FAB00805420 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0822FDB199E9FAB00805420 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E0822FDC199E9FAB00805420 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0822FDD199E9FAB00805420 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E0822FE3199E9FAB00805420 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0822FE4199E9FAB00805420 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		E08532AC199E9EC000EAB8DE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -356,6 +670,7 @@
 		};
 		E08532CD199E9EC000EAB8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A851182A35841B1B8F62A10 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -369,6 +684,7 @@
 		};
 		E08532CE199E9EC000EAB8DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A851182A35841B1B8F62A10 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -439,6 +755,7 @@
 				E08532CE199E9EC000EAB8DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E08532CF199E9EC000EAB8DE /* Build configuration list for PBXNativeTarget "MarcoPoloTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +764,7 @@
 				E08532D1199E9EC000EAB8DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

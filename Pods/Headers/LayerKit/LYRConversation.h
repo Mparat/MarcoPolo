@@ -1,0 +1,1 @@
+../../../../../Dropbox/Layer/Builds/iOS/LayerKit-0.7.13/LayerKit.embeddedframework/LayerKit.framework/Versions/A/Headers/LYRConversation.h
