@@ -115,7 +115,6 @@
 		E0822FE9199E9FAB00805420 /* LayerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerAPIManager.h; sourceTree = "<group>"; };
 		E0822FEA199E9FAB00805420 /* LayerClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerClientController.h; sourceTree = "<group>"; };
 		E0822FEB199E9FAB00805420 /* LayerClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerClientController.m; sourceTree = "<group>"; };
-		E0822FED199E9FAB00805420 /* LocationsApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationsApp-Prefix.pch"; sourceTree = "<group>"; };
 		E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LocationsApp.entitlements; sourceTree = "<group>"; };
 		E0822FEF199E9FAB00805420 /* LogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutCell.h; sourceTree = "<group>"; };
 		E0822FF0199E9FAB00805420 /* LogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutCell.m; sourceTree = "<group>"; };
@@ -192,6 +191,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E05B0DBC19A23B0F004E5557 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FE5199E9FAB00805420 /* HomepageTVC.h */,
+				E0822FC7199E9FAB00805420 /* HomepageTVC.m */,
+				E0822FD6199E9FAB00805420 /* AddressBookTVC.h */,
+				E0822FCF199E9FAB00805420 /* AddressBookTVC.m */,
+				E0822FFB199E9FAB00805420 /* SettingsTVC.h */,
+				E0822FFC199E9FAB00805420 /* SettingsTVC.m */,
+				E0822FD4199E9FAB00805420 /* AddContacts.h */,
+				E0822FD5199E9FAB00805420 /* AddContacts.m */,
+				E0822FCD199E9FAB00805420 /* OptionsView.h */,
+				E0822FCE199E9FAB00805420 /* OptionsView.m */,
+				E0822FF4199E9FAB00805420 /* MessageCVC.h */,
+				E0822FD3199E9FAB00805420 /* MessageCVC.m */,
+				E0822FCB199E9FAB00805420 /* MapVC.h */,
+				E0822FCC199E9FAB00805420 /* MapVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E05B0DBD19A23B3E004E5557 /* Login/SignupViews */ = {
+			isa = PBXGroup;
+			children = (
+				E0823021199E9FF000805420 /* Signup.m */,
+				E0823022199E9FF000805420 /* LoginView.h */,
+				E0823023199E9FF000805420 /* LoginView.m */,
+				E0823024199E9FF000805420 /* Signup.h */,
+				E082301E199E9FCC00805420 /* FirstView.h */,
+				E082301F199E9FCD00805420 /* FirstView.m */,
+			);
+			name = Login/SignupViews;
+			sourceTree = "<group>";
+		};
+		E05B0DBE19A23B68004E5557 /* TableViewCellls */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FF9199E9FAB00805420 /* SearchCell.h */,
+				E0822FFA199E9FAB00805420 /* SearchCell.m */,
+				E0822FD0199E9FAB00805420 /* HomepageChatCell.h */,
+				E0822FD1199E9FAB00805420 /* HomepageChatCell.m */,
+				E0822FE0199E9FAB00805420 /* ContactCell.h */,
+				E0822FE1199E9FAB00805420 /* ContactCell.m */,
+				E0822FEF199E9FAB00805420 /* LogoutCell.h */,
+				E0822FF0199E9FAB00805420 /* LogoutCell.m */,
+			);
+			name = TableViewCellls;
+			sourceTree = "<group>";
+		};
+		E05B0DBF19A23B7D004E5557 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FE7199E9FAB00805420 /* LATabBarController.h */,
+				E0822FE8199E9FAB00805420 /* LATabBarController.m */,
+				E0822FC9199E9FAB00805420 /* LocationManagerController.h */,
+				E0822FCA199E9FAB00805420 /* LocationManagerController.m */,
+				E0822FF5199E9FAB00805420 /* ParseController.h */,
+				E0822FF6199E9FAB00805420 /* ParseController.m */,
+				E0822FEA199E9FAB00805420 /* LayerClientController.h */,
+				E0822FEB199E9FAB00805420 /* LayerClientController.m */,
+				E0822FE9199E9FAB00805420 /* LayerAPIManager.h */,
+				E0822FC8199E9FAB00805420 /* LayerAPIManager.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E05B0DC019A23BCD004E5557 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FF3199E9FAB00805420 /* MessageCell.h */,
+				E0822FD2199E9FAB00805420 /* MessageCell.m */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		E05B0DC119A23BE3004E5557 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FDE199E9FAB00805420 /* Contact.h */,
+				E0822FDF199E9FAB00805420 /* Contact.m */,
+				E0822FFF199E9FAB00805420 /* User.h */,
+				E0823000199E9FAB00805420 /* User.m */,
+				E0822FF7199E9FAB00805420 /* parseUser.h */,
+				E0822FF8199E9FAB00805420 /* parseUser.m */,
+			);
+			name = People;
+			sourceTree = "<group>";
+		};
+		E05B0DC219A23BF9004E5557 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FF1199E9FAB00805420 /* MapViewAnnotation.h */,
+				E0822FF2199E9FAB00805420 /* MapViewAnnotation.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E05B0DC319A23C98004E5557 /* BlurImageEffect */ = {
+			isa = PBXGroup;
+			children = (
+				E0822FFD199E9FAB00805420 /* UIImage+ImageEffects.h */,
+				E0822FFE199E9FAB00805420 /* UIImage+ImageEffects.m */,
+				E0822FD7199E9FAB00805420 /* APLViewController.h */,
+				E0822FD8199E9FAB00805420 /* APLViewController.m */,
+			);
+			name = BlurImageEffect;
+			sourceTree = "<group>";
+		};
 		E0822FD9199E9FAB00805420 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,66 +360,21 @@
 		E08532A9199E9EC000EAB8DE /* MarcoPolo */ = {
 			isa = PBXGroup;
 			children = (
-				E0823021199E9FF000805420 /* Signup.m */,
-				E0823022199E9FF000805420 /* LoginView.h */,
-				E0823023199E9FF000805420 /* LoginView.m */,
-				E0823024199E9FF000805420 /* Signup.h */,
-				E082301E199E9FCC00805420 /* FirstView.h */,
-				E082301F199E9FCD00805420 /* FirstView.m */,
-				E0822FC7199E9FAB00805420 /* HomepageTVC.m */,
-				E0822FC8199E9FAB00805420 /* LayerAPIManager.m */,
-				E0822FC9199E9FAB00805420 /* LocationManagerController.h */,
-				E0822FCA199E9FAB00805420 /* LocationManagerController.m */,
-				E0822FCB199E9FAB00805420 /* MapVC.h */,
-				E0822FCC199E9FAB00805420 /* MapVC.m */,
-				E0822FCD199E9FAB00805420 /* OptionsView.h */,
-				E0822FCE199E9FAB00805420 /* OptionsView.m */,
-				E0822FCF199E9FAB00805420 /* AddressBookTVC.m */,
-				E0822FD0199E9FAB00805420 /* HomepageChatCell.h */,
-				E0822FD1199E9FAB00805420 /* HomepageChatCell.m */,
-				E0822FD2199E9FAB00805420 /* MessageCell.m */,
-				E0822FD3199E9FAB00805420 /* MessageCVC.m */,
-				E0822FD4199E9FAB00805420 /* AddContacts.h */,
-				E0822FD5199E9FAB00805420 /* AddContacts.m */,
-				E0822FD6199E9FAB00805420 /* AddressBookTVC.h */,
-				E0822FD7199E9FAB00805420 /* APLViewController.h */,
-				E0822FD8199E9FAB00805420 /* APLViewController.m */,
-				E0822FD9199E9FAB00805420 /* Base.lproj */,
-				E0822FDE199E9FAB00805420 /* Contact.h */,
-				E0822FDF199E9FAB00805420 /* Contact.m */,
-				E0822FE0199E9FAB00805420 /* ContactCell.h */,
-				E0822FE1199E9FAB00805420 /* ContactCell.m */,
-				E0822FE2199E9FAB00805420 /* en.lproj */,
-				E0822FE5199E9FAB00805420 /* HomepageTVC.h */,
-				E0822FE6199E9FAB00805420 /* Images.xcassets */,
-				E0822FE7199E9FAB00805420 /* LATabBarController.h */,
-				E0822FE8199E9FAB00805420 /* LATabBarController.m */,
-				E0822FE9199E9FAB00805420 /* LayerAPIManager.h */,
-				E0822FEA199E9FAB00805420 /* LayerClientController.h */,
-				E0822FEB199E9FAB00805420 /* LayerClientController.m */,
-				E0822FED199E9FAB00805420 /* LocationsApp-Prefix.pch */,
-				E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */,
-				E0822FEF199E9FAB00805420 /* LogoutCell.h */,
-				E0822FF0199E9FAB00805420 /* LogoutCell.m */,
-				E0822FF1199E9FAB00805420 /* MapViewAnnotation.h */,
-				E0822FF2199E9FAB00805420 /* MapViewAnnotation.m */,
-				E0822FF3199E9FAB00805420 /* MessageCell.h */,
-				E0822FF4199E9FAB00805420 /* MessageCVC.h */,
-				E0822FF5199E9FAB00805420 /* ParseController.h */,
-				E0822FF6199E9FAB00805420 /* ParseController.m */,
-				E0822FF7199E9FAB00805420 /* parseUser.h */,
-				E0822FF8199E9FAB00805420 /* parseUser.m */,
-				E0822FF9199E9FAB00805420 /* SearchCell.h */,
-				E0822FFA199E9FAB00805420 /* SearchCell.m */,
-				E0822FFB199E9FAB00805420 /* SettingsTVC.h */,
-				E0822FFC199E9FAB00805420 /* SettingsTVC.m */,
-				E0822FFD199E9FAB00805420 /* UIImage+ImageEffects.h */,
-				E0822FFE199E9FAB00805420 /* UIImage+ImageEffects.m */,
-				E0822FFF199E9FAB00805420 /* User.h */,
-				E0823000199E9FAB00805420 /* User.m */,
 				E08532B2199E9EC000EAB8DE /* AppDelegate.h */,
 				E08532B3199E9EC000EAB8DE /* AppDelegate.m */,
+				E05B0DBD19A23B3E004E5557 /* Login/SignupViews */,
+				E05B0DBF19A23B7D004E5557 /* Controllers */,
+				E05B0DBC19A23B0F004E5557 /* ViewControllers */,
+				E0822FD9199E9FAB00805420 /* Base.lproj */,
+				E05B0DBE19A23B68004E5557 /* TableViewCellls */,
+				E05B0DC019A23BCD004E5557 /* CollectionViewCells */,
+				E05B0DC219A23BF9004E5557 /* Views */,
+				E05B0DC119A23BE3004E5557 /* People */,
+				E05B0DC319A23C98004E5557 /* BlurImageEffect */,
+				E0822FE6199E9FAB00805420 /* Images.xcassets */,
+				E0822FE2199E9FAB00805420 /* en.lproj */,
 				E08532AA199E9EC000EAB8DE /* Supporting Files */,
+				E0822FEE199E9FAB00805420 /* LocationsApp.entitlements */,
 			);
 			path = MarcoPolo;
 			sourceTree = "<group>";

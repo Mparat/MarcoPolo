@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-//        self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background0"]];
+        self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background0"]];
     }
     return self;
 }
@@ -32,8 +32,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-//    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background0"]];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background0"]];
 
     self.navigationController.navigationBarHidden = YES;
     
@@ -67,7 +66,6 @@
 
 -(void)toSignupView
 {
-//    SignupView *signupView = [[SignupView alloc] init];
     Signup *signupView = [[Signup alloc] init];
 
     [self.navigationController presentViewController:signupView animated:YES completion:^{
