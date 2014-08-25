@@ -62,6 +62,7 @@
 
 -(void)checkCurrentUser
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if (![PFUser currentUser]) {
         [self.window setRootViewController:[self navigationController]];
     }

@@ -83,11 +83,12 @@
     [geo reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         if ([placemarks count] > 0) {
             self.placemark = [placemarks lastObject];
-            NSString *text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@",
-                              self.placemark.subThoroughfare, self.placemark.thoroughfare,
-                              self.placemark.postalCode, self.placemark.locality,
-                              self.placemark.administrativeArea];
+//            NSString *text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@",
+//                              self.placemark.subThoroughfare, self.placemark.thoroughfare,
+//                              self.placemark.postalCode, self.placemark.locality,
+//                              self.placemark.administrativeArea];
 //            self.placemark.country
+            NSString *text = [NSString stringWithFormat:@"%@", [self.placemark.areasOfInterest objectAtIndex:0]];
             self.name = text;
             completion(YES, nil);
         }

@@ -151,6 +151,7 @@
 {
 //    [self viewWillAppear:YES];
     [self fetchLayerConversations];
+    [self placeButtonForEmptyController];
     [self.tableView reloadData];
 }
 
