@@ -148,7 +148,6 @@
     }
     
     PFQuery *query = [PFUser query];
-    [query whereKeyExists:@"username"];
     [query whereKey:@"username" equalTo:email.text];
     NSArray *array = [query findObjects];
     if ([array count] > 1) {

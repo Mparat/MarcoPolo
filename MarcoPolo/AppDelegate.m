@@ -31,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    LYRClient *layerClient = [LYRClient clientWithAppID:[[NSUUID alloc] initWithUUIDString:@"12cc3ec0-18fb-11e4-9b60-a56d020003a5"]];
+    LYRClient *layerClient = [LYRClient clientWithAppID:[[NSUUID alloc] initWithUUIDString:@"fcfd9d64-25c5-11e4-90fa-fff20000031c"]];
     [layerClient connectWithCompletion:^(BOOL success, NSError *error) {
         if (success) {
             NSLog(@"Sucessfully connected to Layer!");
@@ -51,8 +51,8 @@
     self.parseController = [[ParseController alloc] init];
     [self.parseController launchParse];
     
-    [Parse setApplicationId:@"WJyPfvSQq1rKoGMlyTp13xNliwIiPyZz8RyaRXwy"
-                  clientKey:@"r46J9MvgvF6pbnmO7PUsatJbseIbWJM2zqBjSvC4"];
+    [Parse setApplicationId:@"tdEggtacgTg3NFQwckCfs4Pb3D8oQV951J0wIzoo"
+                  clientKey:@"MBBcfxg0nRsIds0xY6jFJbIdE8nM7uk7WJ5Tm7uv"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [self checkCurrentUser];

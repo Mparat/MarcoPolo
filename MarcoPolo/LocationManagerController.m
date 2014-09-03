@@ -83,12 +83,15 @@
     [geo reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         if ([placemarks count] > 0) {
             self.placemark = [placemarks lastObject];
-//            NSString *text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@",
-//                              self.placemark.subThoroughfare, self.placemark.thoroughfare,
-//                              self.placemark.postalCode, self.placemark.locality,
-//                              self.placemark.administrativeArea];
+//            NSString *text = [NSString stringWithFormat:@"%@", [self.placemark.areasOfInterest objectAtIndex:0]];
+            NSString *text = nil;
+            if (!text) {
+                text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@",
+                        self.placemark.subThoroughfare, self.placemark.thoroughfare,
+                        self.placemark.postalCode, self.placemark.locality,
+                        self.placemark.administrativeArea];
+            }
 //            self.placemark.country
-            NSString *text = [NSString stringWithFormat:@"%@", [self.placemark.areasOfInterest objectAtIndex:0]];
             self.name = text;
             completion(YES, nil);
         }
@@ -115,19 +118,13 @@
     self.map.showsUserLocation = YES;
     if (annotation) {
         [self.map addAnnotation:annotation];
+        [self.map showAnnotations:self.map.annotations animated:YES];
     }
-    else{
-        [self.map addAnnotation:self.map.userLocation];
-    }
-    
-//    [annotations addObject:self.map.userLocation];
-    [self.map showAnnotations:[NSArray arrayWithObject:self.map.annotations] animated:YES];
-//    [self.map showAnnotations:annotations animated:YES];
-    
+
     MKCoordinateRegion mapRegion; // structure that defines which map region to display
     
     CLLocation *location;
-    if ([self.map.annotations lastObject] == self.map.userLocation) {
+    if (![self.map.annotations lastObject]) {
         location = [[CLLocation alloc]init];
         location = [self fetchCurrentLocation];
     }
@@ -136,8 +133,8 @@
     }
     
     mapRegion.center = location.coordinate;
-    mapRegion.span.latitudeDelta = 0.2;
-    mapRegion.span.longitudeDelta = 0.2;
+    mapRegion.span.latitudeDelta = 0.01;
+    mapRegion.span.longitudeDelta = 0.01;
     
     [self.map setRegion:mapRegion animated:YES];
     return self.map;
@@ -176,25 +173,32 @@
     return retVal;
 }
 
--(MapViewAnnotation *)annotationFromMessage:(LYRMessage *)message
+-(void)annotationFromMessage:(LYRMessage *)message
 {
 //    NSString *target = [[[message.parts objectAtIndex:1] componentsSeparatedByString:@"\n"] objectAtIndex:0];
-    NSString *address = [message.parts objectAtIndex:1];
-    CLGeocoder *geo = [[CLGeocoder alloc] init];
-    
-    NSArray *person = [self personFromMessage:message forUserID:message.sentByUserID];
-    NSString *title = [person objectAtIndex:1];
     NSMutableArray *retVal = [NSMutableArray array];
+    
+    if (message) {
+        LYRMessagePart *add = [message.parts objectAtIndex:1];
+        NSString *address = [NSString stringWithUTF8String:[add.data bytes]];
+        CLGeocoder *geo = [[CLGeocoder alloc] init];
+        
+        NSArray *person = [self personFromMessage:message forUserID:message.sentByUserID];
+        NSString *title = [person objectAtIndex:1];
+        
+        [geo geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
+            if (placemarks.count > 0) {
+                CLPlacemark *placemark = [placemarks lastObject];
+                CLLocation *location = placemark.location;
+                MapViewAnnotation *annotation = [[MapViewAnnotation alloc] initWithTitle:title subtitle:address andCoordinate:location.coordinate];
+                [retVal addObject:annotation];
+                self.annotation = annotation;
+//                [self displayMap:self.map withAnnotation:annotation];
 
-    [geo geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (placemarks.count > 0) {
-            CLPlacemark *placemark = [placemarks lastObject];
-            CLLocation *location = placemark.location;
-            MapViewAnnotation *annotation = [[MapViewAnnotation alloc] initWithTitle:title subtitle:address andCoordinate:location.coordinate];
-            [retVal addObject:annotation];
-        }
-    }];
-    return [retVal lastObject];
+            }
+        }];
+    }
+//    return [retVal lastObject];
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -205,31 +209,30 @@
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[MKUserLocation class]]) {
-        MKPinAnnotationView *userLocationPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
-        userLocationPin.pinColor = MKPinAnnotationColorPurple;
-        userLocationPin.animatesDrop = YES;
-        userLocationPin.canShowCallout = YES;
-        ((MKUserLocation *)annotation).title = @"My Location";
-        [userLocationPin setSelected:YES animated:YES];
-        return userLocationPin;
-    }
-    else{ // for location of each participant...
-        MKPinAnnotationView *otherLocationPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil]; // reuser Views when it's for all the other participants
-        otherLocationPin.pinColor = MKPinAnnotationColorRed;
-        otherLocationPin.canShowCallout = YES;
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+    if ([annotation isKindOfClass:[MapViewAnnotation class]]) {
+        pin.pinColor = MKPinAnnotationColorRed;
+        pin.canShowCallout = YES;
         
         NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
         [timeFormat setTimeStyle:NSDateFormatterShortStyle];
         NSString *theTime = [timeFormat stringFromDate:((MapViewAnnotation *)annotation).message.sentAt];
-
+        
         UILabel *timeLabel = [[UILabel alloc] init];
         [timeLabel setText:theTime];
-        [otherLocationPin.leftCalloutAccessoryView addSubview:timeLabel];
+        [pin.leftCalloutAccessoryView addSubview:timeLabel];
         
-        [mapView selectAnnotation:otherLocationPin.annotation animated:YES]; // doesn't do anything...
-        return otherLocationPin;
+//        [mapView selectAnnotation:pin.annotation animated:YES]; // doesn't do anything...
+
     }
+    else{
+        pin.pinColor = MKPinAnnotationColorPurple;
+        pin.animatesDrop = YES;
+        pin.canShowCallout = YES;
+        ((MKUserLocation *)annotation).title = @"My Location";
+        [pin setSelected:YES animated:YES];
+    }
+    return pin;
 }
 
 

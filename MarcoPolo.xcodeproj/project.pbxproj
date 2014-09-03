@@ -215,12 +215,12 @@
 		E05B0DBD19A23B3E004E5557 /* Login/SignupViews */ = {
 			isa = PBXGroup;
 			children = (
-				E0823021199E9FF000805420 /* Signup.m */,
+				E082301E199E9FCC00805420 /* FirstView.h */,
+				E082301F199E9FCD00805420 /* FirstView.m */,
 				E0823022199E9FF000805420 /* LoginView.h */,
 				E0823023199E9FF000805420 /* LoginView.m */,
 				E0823024199E9FF000805420 /* Signup.h */,
-				E082301E199E9FCC00805420 /* FirstView.h */,
-				E082301F199E9FCD00805420 /* FirstView.m */,
+				E0823021199E9FF000805420 /* Signup.m */,
 			);
 			name = Login/SignupViews;
 			sourceTree = "<group>";
@@ -228,12 +228,12 @@
 		E05B0DBE19A23B68004E5557 /* TableViewCellls */ = {
 			isa = PBXGroup;
 			children = (
-				E0822FF9199E9FAB00805420 /* SearchCell.h */,
-				E0822FFA199E9FAB00805420 /* SearchCell.m */,
 				E0822FD0199E9FAB00805420 /* HomepageChatCell.h */,
 				E0822FD1199E9FAB00805420 /* HomepageChatCell.m */,
 				E0822FE0199E9FAB00805420 /* ContactCell.h */,
 				E0822FE1199E9FAB00805420 /* ContactCell.m */,
+				E0822FF9199E9FAB00805420 /* SearchCell.h */,
+				E0822FFA199E9FAB00805420 /* SearchCell.m */,
 				E0822FEF199E9FAB00805420 /* LogoutCell.h */,
 				E0822FF0199E9FAB00805420 /* LogoutCell.m */,
 			);

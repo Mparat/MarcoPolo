@@ -172,6 +172,7 @@
     mapView.parseController = self.parseController;
     mapView.conversation = self.conversation;
     mapView.theirLastMessage = self.theirLastMessage;
+    mapView.annotation = self.locationManager.annotation;
     mapView.apiManager = self.apiManager;
     [self.navigationController pushViewController:mapView animated:YES];
 }

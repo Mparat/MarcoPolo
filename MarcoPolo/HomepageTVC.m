@@ -167,8 +167,8 @@
     UIBarButtonItem *newMessageButton = [[UIBarButtonItem alloc] initWithCustomView:view];
     self.navigationItem.rightBarButtonItem = newMessageButton;
     
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-//    self.editButtonItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.editButtonItem.tintColor = [UIColor whiteColor];
     NSDictionary *text = [NSDictionary dictionaryWithObjectsAndKeys:
                           [UIColor whiteColor], NSForegroundColorAttributeName,
                           [UIFont fontWithName:@"AvenirNext" size:20.0], NSForegroundColorAttributeName,
@@ -353,6 +353,8 @@
         options.conversation = [self.conversations objectAtIndex:indexPath.section];
         options.message = ((HomepageChatCell *)cell).message;
         options.theirLastMessage = ((HomepageChatCell *)cell).theirLastMessage;
+        options.annotation = [[MapViewAnnotation alloc] init];
+        [options.locationManager annotationFromMessage:options.theirLastMessage];
         [self.navigationController pushViewController:options animated:NO];
         //    [self.navigationController presentViewController:[[UINavigationController alloc] initWithRootViewController:options] animated:YES completion:^{
         //        //

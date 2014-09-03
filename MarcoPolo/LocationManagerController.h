@@ -32,6 +32,7 @@
 @property (nonatomic, weak) id<LocationManagerControllerDelegate>delegate;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) LayerAPIManager *apiManager;
+@property (nonatomic, strong) MapViewAnnotation *annotation;
 
 
 
@@ -40,7 +41,7 @@
 -(void)returnLocationName:(CLLocation *)location completion:(void(^)(BOOL done, NSError *error))completion;
 -(CLLocation *)getLocationFromData:(NSData *)data;
 -(NSArray *)createAnnotationsFromMessages:(NSMutableArray *)array;
--(MapViewAnnotation *)annotationFromMessage:(LYRMessage *)message;
+-(void)annotationFromMessage:(LYRMessage *)message;
 
 
 

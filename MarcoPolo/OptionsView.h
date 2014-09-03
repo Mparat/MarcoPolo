@@ -13,7 +13,7 @@
 #import "LayerAPIManager.h"
 #import "ParseController.h"
 #import "Contact.h"
-
+#import "MapViewAnnotation.h"
 #import "User.h"
 
 @interface OptionsView : UIViewController
@@ -30,6 +30,8 @@
 @property (nonatomic, strong) ParseController *parseController;
 
 @property (nonatomic, strong) User *me;
+
+@property (nonatomic, strong) MapViewAnnotation *annotation;
 
 
 @end
