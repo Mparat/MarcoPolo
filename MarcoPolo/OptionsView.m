@@ -113,21 +113,8 @@
 
 -(void)toAppleMaps
 {
-    NSString *address = [self.theirLastMessage.parts objectAtIndex:1];
-    CLGeocoder *geo = [[CLGeocoder alloc] init];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%f,%f", self.locationManager.annotation.coordinate.latitude, self.locationManager.annotation.coordinate.longitude]]];
 
-    [geo geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (placemarks.count > 0) {
-            CLPlacemark *placemark = [placemarks lastObject];
-            CLLocation *location = placemark.location;
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%f,%f", location.coordinate.latitude, location.coordinate.longitude]]];
-        }
-        else{
-            CLLocation *location = [self.locationManager fetchCurrentLocation];
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%f,%f", location.coordinate.latitude, location.coordinate.longitude]]];
-        }
-    }];
-        
         
 //    LYRMessagePart *part = [self.theirLastMessage.parts objectAtIndex:1];
 //    NSData *data = part.data;

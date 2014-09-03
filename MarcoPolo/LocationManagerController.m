@@ -213,6 +213,7 @@
     if ([annotation isKindOfClass:[MapViewAnnotation class]]) {
         pin.pinColor = MKPinAnnotationColorRed;
         pin.canShowCallout = YES;
+        pin.animatesDrop = YES;
         
         NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
         [timeFormat setTimeStyle:NSDateFormatterShortStyle];
@@ -222,8 +223,6 @@
         [timeLabel setText:theTime];
         [pin.leftCalloutAccessoryView addSubview:timeLabel];
         
-//        [mapView selectAnnotation:pin.annotation animated:YES]; // doesn't do anything...
-
     }
     else{
         pin.pinColor = MKPinAnnotationColorPurple;
