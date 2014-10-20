@@ -117,7 +117,7 @@
     }
     [self placeButtonForEmptyController];
 
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
     if (self.expandedIndexPath != nil) {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.expandedIndexPath]; //self.expandedIndexPath
         cell.layer.shadowColor = [[UIColor blackColor] CGColor];

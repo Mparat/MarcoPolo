@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "HomepageTVC.h"
@@ -35,6 +34,10 @@
     [layerClient connectWithCompletion:^(BOOL success, NSError *error) {
         if (success) {
             NSLog(@"Sucessfully connected to Layer!");
+            for (int i = 1; i < 1000; i++) {
+                printf("%d\n", i);
+//                printf("register r%d(r_out[%d], wr_data, clock, w_enable[%d], reset);\n", i, i, i);
+            }
         } else {
             NSLog(@"Failed connection to Layer with error: %@", error);
         }
@@ -56,6 +59,18 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [self checkCurrentUser];
+    
+//    // Checking if app is running iOS 8
+//    if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
+//        // Register device for iOS8
+//        UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound
+//                                                                                             categories:nil];
+//        [application registerUserNotificationSettings:notificationSettings];
+//        [application registerForRemoteNotifications];
+//    } else {
+//        // Register device for iOS7
+//        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge];
+//    }
     
     return YES;
 }
@@ -97,7 +112,6 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    NSError *error;
     BOOL success = [self.layerClientController.layerClient synchronizeWithRemoteNotification:userInfo completion:^(UIBackgroundFetchResult fetchResult, NSError *error) {
         if (!error) {
             NSLog (@"Layer Client finished background sycn");

@@ -1,26 +1,19 @@
 PODS:
-  - Bolts (1.1.2)
-  - Facebook-iOS-SDK (3.17.0):
-    - Bolts
-  - LayerKit (0.7.13)
-  - MCSwipeTableViewCell (2.1.0)
-  - Parse (1.2.21):
-    - Facebook-iOS-SDK (~> 3.17)
+  - Bolts (1.1.3)
+  - LayerKit (0.7.14)
+  - MCSwipeTableViewCell (2.1.2)
+  - Parse (1.4.2):
+    - Bolts (~> 1.1.3)
 
 DEPENDENCIES:
-  - LayerKit (from `/Users/meeraparat/Dropbox/Layer/Builds/iOS/LayerKit-0.7.13`)
+  - LayerKit
   - MCSwipeTableViewCell (~> 2.1)
   - Parse
 
-EXTERNAL SOURCES:
-  LayerKit:
-    :path: /Users/meeraparat/Dropbox/Layer/Builds/iOS/LayerKit-0.7.13
-
 SPEC CHECKSUMS:
-  Bolts: 2635e8698a630774689441047f3465d78c48d485
-  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
-  LayerKit: 4f2ef7000ef1ef3cfcf421f1dadf7642d9d77226
-  MCSwipeTableViewCell: 713086e29ce3c2171a0102fc594bf583fa7dd323
-  Parse: 4be4e9fe2ee6dae16010e7622a5641a7c89154b7
+  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  LayerKit: fde932ab71903d0afea2a1d34ae6a8e93d425697
+  MCSwipeTableViewCell: 8e78ff197ab06ba7bfd5c938a00149de8a33afa9
+  Parse: fc9ceb6edbc6bb6a1a1f3c33f0db3293a6894f94
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.1

@@ -106,13 +106,15 @@
 
     LYRMessagePart *emptyAskPart = [LYRMessagePart messagePartWithText:[NSString stringWithFormat:@"*%@ asked*", [person objectAtIndex:1]]];
     LYRMessage *message = [LYRMessage messageWithConversation:conversation parts:@[recipientArr, emptyAskPart]];
+    
+//    NSArray *person1 = [recipients objectForKey:message.sentByUserID];
+    NSString *notifText = [NSString stringWithFormat:@"Marco from %@ %@", [person objectAtIndex:1], [person objectAtIndex:2]];
+    [self.layerClient setMetadata:@{LYRMessagePushNotificationAlertMessageKey: notifText} onObject:message];
+
     NSError *error;
     BOOL success = [self.layerClient sendMessage:message error:&error];
     if (success) {
         NSLog(@"Message send succesfull");
-        NSArray *person = [recipients objectForKey:message.sentByUserID];
-        NSString *notifText = [NSString stringWithFormat:@"Marco from %@ %@", [person objectAtIndex:1], [person objectAtIndex:2]];
-        [self.layerClient setMetadata:@{LYRMessagePushNotificationAlertMessageKey: notifText} onObject:message];
     } else {
         NSLog(@"Message send failed with error: %@", error);
     }
@@ -158,13 +160,15 @@
             LYRMessagePart *location = [LYRMessagePart messagePartWithText:self.locationManager.name];
             LYRMessagePart *part3 = [LYRMessagePart messagePartWithText:@""];
             LYRMessage *message = [LYRMessage messageWithConversation:conversation parts:@[recipientArr, location, part3]];
+            
+            NSArray *person = [recipients objectForKey:message.sentByUserID];
+            NSString *notifText = [NSString stringWithFormat:@"Polo from %@ %@\r%@", [person objectAtIndex:1], [person objectAtIndex:2], self.locationManager.name];
+            [self.layerClient setMetadata:@{LYRMessagePushNotificationAlertMessageKey: notifText} onObject:message];
+
             NSError *error;
             BOOL success = [self.layerClient sendMessage:message error:&error];
             if (success) {
                 NSLog(@"Message send succesfull");
-                NSArray *person = [recipients objectForKey:message.sentByUserID];
-                NSString *notifText = [NSString stringWithFormat:@"Polo from %@ %@\r%@", [person objectAtIndex:1], [person objectAtIndex:2], self.locationManager.name];
-                [self.layerClient setMetadata:@{LYRMessagePushNotificationAlertMessageKey: notifText} onObject:message];
             } else {
                 NSLog(@"Message send failed with error: %@", error);
             }

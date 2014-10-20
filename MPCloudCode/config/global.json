@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "MarcoPolo": {
+            "applicationId": "tdEggtacgTg3NFQwckCfs4Pb3D8oQV951J0wIzoo", 
+            "masterKey": "UMnnkEEkuRzPoc5MZayzIfXKcLGg0llCiwmpVYLC"
+        }, 
+        "_default": {
+            "link": "MarcoPolo"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}
