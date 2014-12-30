@@ -25,6 +25,7 @@
  @param MIMEType A MIME Type identifying the type of data contained in the given data object.
  @param data The data to be embedded in the mesage part.
  @return A new message part with the given MIME Type and data.
+ @raises NSInvalidArgumentException Raised if MIME Type or data is nil.
  */
 + (instancetype)messagePartWithMIMEType:(NSString *)MIMEType data:(NSData *)data;
 
@@ -34,6 +35,7 @@
  @param MIMEType A MIME Type identifying the type of data contained in the given data object.
  @param stream A stream from which to read the data for the message part.
  @return A new message part with the given MIME Type and stream of data.
+ @raises NSInvalidArgumentException Raised if MIME Type or stream is nil.
  */
 + (instancetype)messagePartWithMIMEType:(NSString *)MIMEType stream:(NSInputStream *)stream;
 
@@ -46,6 +48,7 @@
  
  @param text The plain text body of the new message part.
  @return A new message part with the MIME Type text/plain and a UTF-8 encoded representation of the given input text.
+ @raises NSInvalidArgumentException Raised if text is nil.
  */
 + (instancetype)messagePartWithText:(NSString *)text;
 

@@ -10,29 +10,29 @@
 	<string>MarcoPolo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4A9FA358-107C-45E4-8718-7ED96E8DAE72</key>
+		<key>B02E10C3A631A3961561DF80F3D28C48B4B0D452</key>
 		<string>https://github.com/Mparat/MarcoPolo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MarcoPolo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4A9FA358-107C-45E4-8718-7ED96E8DAE72</key>
+		<key>B02E10C3A631A3961561DF80F3D28C48B4B0D452</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Mparat/MarcoPolo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4A9FA358-107C-45E4-8718-7ED96E8DAE72</string>
+	<string>B02E10C3A631A3961561DF80F3D28C48B4B0D452</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4A9FA358-107C-45E4-8718-7ED96E8DAE72</string>
+			<string>B02E10C3A631A3961561DF80F3D28C48B4B0D452</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MarcoPolo</string>
 		</dict>

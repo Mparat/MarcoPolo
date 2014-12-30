@@ -4,22 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-LayerKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-MCSwipeTableViewCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>084FD3A25B6681026C093D3A</key>
+		<key>05E5099A067B2D78BC666E70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>266E791522CEA536723DB051</key>
+		<key>43FF0FB36C87DC27F1CD4F2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57230FCD7BDC7BAF1F4B2A33</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C1B731E1631289948B53167</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4BA22B0AC7FD0CE06787FD9</key>
+		<key>743C94576C5BF2BBDA96E743</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,10 +9,11 @@
 #import "LYRClient.h"
 #import "LYRErrors.h"
 #import "LYRConversation.h"
-#import "LYRConversation.h"
 #import "LYRMessage.h"
 #import "LYRMessagePart.h"
-#import "LYRObjectChangeConstants.h"
+#import "LYRConstants.h"
+#import "LYRQuery.h"
+#import "LYRQueryController.h"
 
 /**
  @abstract Returns the version of the Layer SDK as a string.

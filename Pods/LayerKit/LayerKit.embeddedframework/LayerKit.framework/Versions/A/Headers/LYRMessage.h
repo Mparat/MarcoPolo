@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LYRQuery.h"
+#import "LYRConstants.h"
 
 @class LYRConversation;
 
@@ -28,48 +30,30 @@ typedef NS_ENUM(NSInteger, LYRRecipientStatus) {
 };
 
 /**
- @abstract The key used in the message metadata to specify the APNS alert message the server should include in the push delivered to the receiver of the message.
- The value associated to this key must be passed in before the message is sent and will not be seen by any of the receivers of the message.
- */
-extern NSString *const LYRMessagePushNotificationAlertMessageKey;
-
-/**
- @abstract The key used in the message metadata to specify the APNS sound name the server should include in the push delivered to the receiver of the message.
- The value associated to this key must be passed in before the message is sent and will not be seen by any of the receivers of the message.
- */
-extern NSString *const LYRMessagePushNotificationSoundNameKey;
-
-/**
  @abstract The `LYRMessage` class represents a message within a conversation (modeled by the `LYRConversation` class) between two or
  more participants within Layer.
  */
-@interface LYRMessage : NSObject
-
-/**
- @abstract Creates and returns a new message with the given conversation and set of message parts.
- @param conversation The conversation that the message is a part of. Cannot be `nil`.
- @param messageParts An array of `LYRMessagePart` objects specifying the content of the message. Cannot be `nil` or empty.
- @return A new message that is ready to be sent.
- @raises NSInvalidArgumentException Raised if `conversation` is `nil` or `messageParts` is empty.
- */
-+ (instancetype)messageWithConversation:(LYRConversation *)conversation parts:(NSArray *)messageParts;
+@interface LYRMessage : NSObject <LYRQueryable>
 
 /**
  @abstract A unique identifier for the message.
+ @discussion The `identifier` property is queryable via the `LYRPredicateOperatorIsEqualTo`, `LYRPredicateOperatorIsNotEqualTo`, `LYRPredicateOperatorIsIn`, and `LYRPredicateOperatorIsNotIn` operators.
  */
-@property (nonatomic, readonly) NSURL *identifier;
+@property (nonatomic, readonly) NSURL *identifier LYR_QUERYABLE_PROPERTY;
 
 /**
  @abstract Object index dictating message order in a conversation.
- 
  @discussion Unsent messages have index value of `NSNotFound`.
+ 
+ The `index` property is queryable using all predicate operators.
  */
-@property (nonatomic, readonly) NSUInteger index;
+@property (nonatomic, readonly) NSUInteger index LYR_QUERYABLE_PROPERTY;
 
 /**
  @abstract The conversation that the receiver is a part of.
+ @discussion The `conversation` property is queryable via the `LYRPredicateOperatorIsEqualTo`, `LYRPredicateOperatorIsNotEqualTo`, `LYRPredicateOperatorIsIn`, and `LYRPredicateOperatorIsNotIn` operators.
  */
-@property (nonatomic, readonly) LYRConversation *conversation;
+@property (nonatomic, readonly) LYRConversation *conversation LYR_QUERYABLE_PROPERTY;
 
 /**
  @abstract An array of message parts (modeled by the `LYRMessagePart` class) that provide access to the content of the receiver.
@@ -78,8 +62,9 @@ extern NSString *const LYRMessagePushNotificationSoundNameKey;
 
 /**
  @abstract Returns a Boolean value that is true when the receiver has been sent by a client and posted to the Layer services.
+ @discussion The `isSent` property is queryable via the `LYRPredicateOperatorIsEqualTo` and `LYRPredicateOperatorIsNotEqualTo` predicate operators.
  */
-@property (nonatomic, readonly) BOOL isSent;
+@property (nonatomic, readonly) BOOL isSent LYR_QUERYABLE_PROPERTY;
 
 /**
  @abstract Returns a Boolean value that indicates if the receiver has been deleted.
@@ -87,19 +72,52 @@ extern NSString *const LYRMessagePushNotificationSoundNameKey;
 @property (nonatomic, readonly) BOOL isDeleted;
 
 /**
- @abstract The date and time that the message was originally sent.
+ @abstract Returns a Boolean value that indicates if the receiver has not yet been read by the current user.
+ @discussion The `isUnread` property is queryable via the `LYRPredicateOperatorIsEqualTo` and `LYRPredicateOperatorIsNotEqualTo` predicate operators.
  */
-@property (nonatomic, readonly) NSDate *sentAt;
+@property (nonatomic, readonly) BOOL isUnread LYR_QUERYABLE_PROPERTY;
 
 /**
- @abstract The date and time that the message was received by the authenticated user or `nil` if the current user sent the message.
+ @abstract The date and time that the message was originally sent.
+ @discussion The `sentAt` property is queryable using all predicate operators.
  */
-@property (nonatomic, readonly) NSDate *receivedAt;
+@property (nonatomic, readonly) NSDate *sentAt LYR_QUERYABLE_PROPERTY;
+
+/**
+ @abstract The date and time that the message was received by the authenticated user.
+ @discussion For messages sent by the current user the `receivedAt` value will be equal to `sentAt`. The `receivedAt` property is queryable using all predicate operators.
+ */
+@property (nonatomic, readonly) NSDate *receivedAt LYR_QUERYABLE_PROPERTY LYR_QUERYABLE_FROM(LYRConversation);
 
 /**
  @abstract The user ID of the user who sent the message.
+ @discussion The `sentByUserID` property is queryable via the `LYRPredicateOperatorIsEqualTo`, `LYRPredicateOperatorIsNotEqualTo`, `LYRPredicateOperatorIsIn`, and `LYRPredicateOperatorIsNotIn` operators.
  */
-@property (nonatomic, readonly) NSString *sentByUserID;
+@property (nonatomic, readonly) NSString *sentByUserID LYR_QUERYABLE_PROPERTY;
+
+///----------------------
+/// @name Marking as Read
+///----------------------
+
+/**
+ @abstract Marks the message as being read by the current user.
+ @param error A pointer to an error object that, upon failure, will be set to an error describing why the message could not be sent.
+ @return `YES` if the message was marked as read or `NO` if the message was already marked as read.
+ */
+- (BOOL)markAsRead:(NSError **)error;
+
+///---------------------------
+/// @name Deleting the Message
+///---------------------------
+
+/**
+ @abstract Deletes a message in the specified mode.
+ @param mode The deletion mode, specifying how the message is to be deleted (i.e. locally or synchronized across participants).
+ @param error A pointer to an error that upon failure is set to an error object describing why the deletion failed.
+ @return A Boolean value indicating if the request to delete the message was submitted for synchronization.
+ @raises NSInvalidArgumentException Raised if `message` is `nil`.
+ */
+- (BOOL)delete:(LYRDeletionMode)deletionMode error:(NSError **)error;
 
 ///------------------------------
 /// @name Accessing Read Receipts
@@ -118,5 +136,18 @@ extern NSString *const LYRMessagePushNotificationSoundNameKey;
  @return An `LYRRecipientStatus` value specifying the message status for the given participant or `LYRRecipientStatusInvalid` if the specified user is not a participant in the conversation.
  */
 - (LYRRecipientStatus)recipientStatusForUserID:(NSString *)userID;
+
+@end
+
+// Deprecated. Use `LYRMessageOptionsPushNotificationAlertKey` instead.
+extern NSString *const LYRMessagePushNotificationAlertMessageKey __deprecated;
+
+// Deprecated. Use `LYRMessageOptionsPushNotificationSoundNameKey:` instead.
+extern NSString *const LYRMessagePushNotificationSoundNameKey __deprecated;
+
+@interface LYRMessage (Deprecated_Nonfunctional)
+
+// Deprecated. Use `LYRClient newMessageWithParts:options:error:` with `LYRConversation sendMessage:error:` instead.
++ (instancetype)messageWithConversation:(LYRConversation *)conversation parts:(NSArray *)messageParts __deprecated;
 
 @end

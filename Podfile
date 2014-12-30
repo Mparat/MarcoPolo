@@ -1,3 +1,5 @@
+pod 'Bolts'
 pod 'Parse'
+pod 'ParseUI'
 pod 'MCSwipeTableViewCell', '~> 2.1'
-pod 'LayerKit' 
+pod 'LayerKit'

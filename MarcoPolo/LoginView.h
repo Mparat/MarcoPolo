@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 #import "ParseController.h"
 #import "LocationManagerController.h"
 #import "LayerAPIManager.h"
